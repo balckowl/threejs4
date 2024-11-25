@@ -1,28 +1,27 @@
-import { useHelper, useTexture } from "@react-three/drei";
+import { useTexture } from "@react-three/drei";
 import { Wall } from "./Wall";
 import { Showcase } from "./ShowCase";
 import { Fence } from "./Fence";
-import { useRef } from "react";
 import Painting from "./Painting";
-import { PointLightHelper } from "three/webgpu";
 
-function LightHelper() {
 
-    const roomWidth = 15; // 部屋の幅
-    const roomHeight = 10; // 部屋の高さ
+// function LightHelper() {
 
-    const light = useRef(null!)
+//     const roomWidth = 15; // 部屋の幅
+//     const roomHeight = 10; // 部屋の高さ
 
-    useHelper(light, PointLightHelper, 1, "orange")
+//     const light = useRef(null!)
 
-    return (
-        <pointLight
-            ref={light}
-            position={[roomWidth / 2 - 0.5 / 2, roomHeight / 2 + 1, 0]}
-            intensity={50}
-        />
-    )
-}
+//     useHelper(light, PointLightHelper, 1, "orange")
+
+//     return (
+//         <pointLight
+//             ref={light}
+//             position={[roomWidth / 2 - 0.5 / 2, roomHeight / 2 + 1, 0]}
+//             intensity={50}
+//         />
+//     )
+// }
 
 
 export const Room = () => {
