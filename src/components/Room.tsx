@@ -1,6 +1,6 @@
 import { useTexture } from "@react-three/drei";
 import { Wall } from "./Wall";
-import { Showcase } from "./ShowCase";
+import { Showcase } from "./Showcase";
 import { Fence } from "./Fence";
 import Painting from "./Painting";
 
