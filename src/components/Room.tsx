@@ -78,7 +78,8 @@ export const Room = () => {
             />
 
             <Painting
-                lPosition={[0, roomHeight / 2 + 2, -roomDepth / 2 + 0.5 / 2]}
+                lPosition={[0, roomHeight / 2 + 2 - 0.5, -roomDepth / 2 + 0.5 / 2 + 1]}
+                lbPosition={[0, roomHeight / 2 + 2, -roomDepth / 2 + 0.5 / 2]}
                 fPosition={[0, roomHeight / 2, -roomDepth / 2 + 0.005 - frameDepth / 2]}
                 pPosition={[0, roomHeight / 2, -roomDepth / 2 + 0.01]}
                 fSize={[frameWidth, frameHeight, frameDepth]}
@@ -89,7 +90,8 @@ export const Room = () => {
             />
 
             <Painting
-                lPosition={[-roomWidth / 2 + 0.5 / 2, roomHeight / 2 + 2, 0]}
+                lPosition={[-roomWidth / 2 + 0.5 / 2 + 1, roomHeight / 2 + 2 - 0.5, 0]}
+                lbPosition={[-roomWidth / 2 + 0.5 / 2, roomHeight / 2 + 2, 0]}
                 fPosition={[-roomDepth / 2 + 0.005 - frameDepth / 2, roomHeight / 2, 0]}
                 pPosition={[-roomWidth / 2 + 0.01, roomHeight / 2, 0]}
                 fSize={[frameWidth, frameHeight, frameDepth]}
@@ -111,7 +113,8 @@ export const Room = () => {
             /> */}
 
             <Painting
-                lPosition={[roomWidth / 2 - 0.5 / 2, roomHeight / 2 + 2, 0]}
+                lPosition={[roomWidth / 2 - 0.5 / 2 - 1, roomHeight / 2 + 2 - 0.5, 0]}
+                lbPosition={[roomWidth / 2 - 0.5 / 2, roomHeight / 2 + 2, 0]}
                 fPosition={[roomWidth / 2 + 0.005 - frameDepth / 2, roomHeight / 2, 0]}
                 pPosition={[roomWidth / 2 - 0.1, roomHeight / 2, 0]}
                 fSize={[frameWidth, frameHeight, frameDepth]}

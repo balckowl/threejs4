@@ -3,7 +3,8 @@ import { useTexture } from "@react-three/drei"
 type Props = {
     fPosition: [number, number, number],
     pPosition: [number, number, number],
-    lPosition: [number, number, number]
+    lPosition: [number, number, number],
+    lbPosition: [number, number, number]
     rotation: [number, number, number],
     fSize: [number, number, number],
     pSize: [number, number]
@@ -11,7 +12,7 @@ type Props = {
     pictureUrl: string
 }
 
-export default function Painting({ fPosition, pPosition, lPosition, rotation, fSize, pSize, color, pictureUrl }: Props) {
+export default function Painting({ fPosition, pPosition, lbPosition, lPosition, rotation, fSize, pSize, color, pictureUrl }: Props) {
 
     const picture = useTexture({
         map: pictureUrl
@@ -23,7 +24,7 @@ export default function Painting({ fPosition, pPosition, lPosition, rotation, fS
             <group>
                 <mesh
                     rotation={rotation}
-                    position={[lPosition[0], lPosition[1], lPosition[2]]}
+                    position={lbPosition}
                 >
                     <boxGeometry args={[2.8, 0.5, 0.5]} />
                     <meshStandardMaterial
@@ -36,9 +37,9 @@ export default function Painting({ fPosition, pPosition, lPosition, rotation, fS
                 </mesh>
                 {/* スポットライト */}
                 <pointLight
-                    position={[lPosition[0], lPosition[1] - 0.5, lPosition[2]]}
-                    intensity={10}
-                    distance={40}
+                    position={lPosition}
+                    intensity={20}
+                    color="orange"
                 />
             </group>
 
